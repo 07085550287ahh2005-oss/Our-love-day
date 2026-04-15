@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Love Story</title>
+    <style>
+        body { background-color: #ffeef2; text-align: center; font-family: sans-serif; display: flex; align-items: center; justify-content: center; height: 100vh; margin: 0; color: #d63384; }
+        .container { background: white; padding: 30px; border-radius: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        .heart { font-size: 50px; animation: beat .3s infinite alternate; }
+        @keyframes beat { to { transform: scale(1.2); } }
+        #days { font-size: 3rem; font-weight: bold; color: #ff4d6d; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="heart">❤️</div>
+        <h2>Happy Anniversary!</h2>
+        <div id="days">0</div>
+        <p>Days Together</p>
+        <p>Since: Sept 7, 2024</p>
+    </div>
+    <script>
+        const start = new Date("2024-09-07");
+        const today = new Date();
+        document.getElementById("days").innerText = Math.floor((today - start) / (1000 * 60 * 60 * 24));
+    </script>
+</body>
+</html>
